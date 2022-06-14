@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+}
+
+ul.noBullets {
+    list-style: none;
+}
+ul a:link {
+    text-decoration: none;
+    border: 1px solid black;
+    color: black;
+    background-color: #fa862d;
+    display: inline;
+    width: 200px;
+    text-align: left;
+    margin-bottom: 1px;
+    margin-right: 10px;
+}
+
+ul a:hover, a:active {
+    background-color: #691E06;
+    color: #Ffead1;
+    border: 1px solid #691E06;
+}
+
