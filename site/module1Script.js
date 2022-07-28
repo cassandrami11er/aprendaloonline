@@ -1,2 +1,8 @@
-const name = document.getElementsByName('name')
-const form = document.getElementsById('moduleReviewTest')
+function validate() 
+{
+    var name = document.getElementById('name')
+    if (name == "Cassie") {
+        alert("yay");
+    }
+
+}
