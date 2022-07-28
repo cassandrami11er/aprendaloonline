@@ -1,25 +1,184 @@
-body {
+html {
     text-align: center;
 }
 
-ul.noBullets {
-    list-style: none;
-}
-ul a:link {
-    text-decoration: none;
-    border: 1px solid black;
-    color: black;
-    background-color: #fa862d;
-    display: inline;
-    width: 200px;
-    text-align: left;
-    margin-bottom: 1px;
-    margin-right: 10px;
+/*HEADER*/
+header {
+    /*sets up the header*/
+    position: fixed;
+    background-color: orange;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding: 10px;
 }
 
-ul a:hover, a:active {
-    background-color: #691E06;
-    color: #Ffead1;
-    border: 1px solid #691E06;
+#logo {
+    float: left;
+    height: 50px;
+    vertical-align: middle;
 }
+
+#headerTitle {
+    /*moves the title over a little and gives it more space*/
+    padding-right: 10px;
+}
+
+#headerPages {
+    /*sets up the pages in the header as a row*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    left:0;
+}
+
+#headerPages > li {
+    /*sets up the pages in the header as a row*/
+    float: left;
+    vertical-align: center;
+}
+
+#headerPages > li > a {
+    /*makes the pages in the header look normal*/
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#headerPages > li > a:hover {
+    /*makes the pages in the header turn beige when hovered over*/
+    background-color: beige;
+}
+
+#headerTitle {
+    /*makes the header title stay on the line with everything else*/
+    display:inline;
+}
+
+#first {
+    /*moves the first item down so it doesn't go under the header*/
+    margin-top: 90px;
+}
+
+
+
+/*MODULE LEVEL BOXES*/
+.moduleLevelBox {
+    /*this makes 3 boxes. 
+    Each one contains info about a given level of modules (beginner, intermediate, advanced) and a button to go to the page for that level of modules. */
+    width: 46%;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    background-color: pink;
+    margin-top: 2%;
+    margin-left:25%;
+    border-radius: 25px;
+}
+.moduleLevelHeader {
+    font-size:150%
+}
+
+/*buttons*/
+.moduleLevelButton {
+    /*this styles the buttons in the moduleLevelBox, 
+    which allow the user to go to the page for a given level of modules (beginner, intermediate, advanced)*/
+    background-color: purple;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    font-size: large;
+    padding: 0.5% 2%;
+    border: 2px solid white;
+    border-radius: 15px; /*gives the rounded shape*/
+    box-shadow: 0 8px 2px rgba(0,0,0,0.3);
+    transition-duration: 0.2s; /*sets the amount of time it takes for the :hover code to take effect*/
+}
+.moduleLevelButton > a {
+    /*styles the text inside the button*/
+    text-decoration: none;
+    color:white;
+}
+.moduleLevelButton:hover {
+    /*styles the moduleLevelButton when they are being hovered over*/
+    background-color:aquamarine;
+    color:black;
+
+    /*makes the button look like it is moving down*/
+    transform: translateY(4px);
+    box-shadow: 0 4px 2px rgba(0,0,0,0.3);
+}
+.moduleLevelButton:hover a {
+    /*styles the text*/
+    text-decoration: none;
+    color:black;
+}
+
+
+
+/*MODULE LEVEL SECTIONS*/
+/*level section text*/
+.moduleLevelSection {
+    margin-top: 40px;
+}
+.moduleLevelSectionHeader {
+    font-size: 30px;
+    text-shadow: 3px;
+}
+
+/*level section grid layout*/
+.moduleLevelSectionGridContainer {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 20px;
+    padding: 10px;
+}
+.moduleItem {
+    background-color: darkcyan;
+    color: white;
+    padding: 0px 0px 15px 0px;
+    border-radius: 20px;
+}
+.moduleLevelSection:nth-child(1), .moduleItem:nth-child(1) {
+    grid-column: 1;
+}
+.moduleLevelSection:nth-child(1), .moduleItem:nth-child(2) {
+    grid-column: 2;
+}
+.moduleLevelSection:nth-child(1), .moduleItem:nth-child(3) {
+    grid-column: 3;
+}
+
+/*items text*/
+.moduleItemHeader {
+    font-size: large;
+}
+
+/*items buttons*/
+.moduleItemButton {
+    background-color: purple;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    border: 2px white solid;
+    border-radius: 20px;
+    padding: 4px 10px;
+    box-shadow: 0 8px 2px rgba(0,0,0,0.3);
+    transition-duration: 0.2s;
+}
+.moduleItemButton:hover {
+    background-color:aquamarine;
+    transform: translateY(4px);
+    box-shadow: 0 4px 2px rgba(0,0,0,0.3);
+}
+.moduleItemButton:hover > a {
+    color:black;
+}
+.moduleItemButton > a {
+    text-decoration: none;
+    color: white;
+}
+
+
 
