@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Aprendalo Online</title>
     <link rel="stylesheet" href="module1Style.css">
-    <script src="module1Script.js"></script>
 </head>
 
 <header><!--COPY THIS FROM INDEX WHEN FINISHED--></header>
@@ -20,13 +19,28 @@
 
 
 
-    <div id="moduleReviewTestBox">
-        <p>Module 1 Review Test</p>
-        <form id="moduleReviewTest" action="/aprendaloonline/site/module1.html" method="GET">
-            <label>Name</label>
-            <input name="name" id="name">
+    <div class="ModuleReviewTestBox">
+        <form class="reviewTest" name="reviewTest" method="get" onsubmit="return false">
+            <fieldset>
+                <legend>The number 143 is written and pronounced as: </legend>
+                <label>
+                    <input type="radio" name="question1" value="1">
+                    One-four-three
+                </label>
+                <label>
+                    <input type="radio" name="question1" value="2">
+                    Fourteen-three
+                </label>
+                <label>
+                    <input type="radio" name="question1" value="3">
+                    One hundred-forty-three
+                </label>
 
-            <button onclick="validate()">Submit</button>
+               <p id="question1_wrong">Incorrect - the answer is "one hundred-forty-three"</p>
+            </fieldset>
+
+            <button onclick="check()">Submit</button>
+            <script src="module1Processor.js"></script>
 
         </form>
     </div>
