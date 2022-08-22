@@ -131,14 +131,14 @@ header {
 /*level section grid layout*/
 .moduleLevelSectionGridContainer {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 30%;
     gap: 20px;
     padding: 10px;
 }
 .moduleItem {
     background-color: darkcyan;
     color: white;
-    padding: 0px 0px 15px 0px;
+    padding: 20px;
     border-radius: 20px;
 }
 .moduleLevelSection:nth-child(1), .moduleItem:nth-child(1) {

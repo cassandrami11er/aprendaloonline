@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Module 1</title>
+    <link rel="stylesheet" href="module1Style.css">
+</head>
+
+<header><!--COPY THIS FROM INDEX WHEN FINISHED--></header>
+<body>
+
+    <p id="heading">Module 1</p>
+
+    <div class="modulePart">
+        <p class="modulePartTitle">Part 1: Greetings</p>
+        <iframe class="modulePartVideo" src="videos/module 1A.mp4"></iframe>
+    </div>
+
+
+
+    <div class="ModuleReviewTestBox">
+        <form class="reviewTest" name="reviewTest" method="get" onsubmit="return false">
+
+            <!--Question 1-->
+            <fieldset>
+                <legend>The number 143 is written and pronounced as: </legend>
+                <label>
+                    <input type="radio" name="q1" value="1">
+                    One-four-three
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="2">
+                    Fourteen-three
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="3">
+                    One hundred-forty-three
+                </label>
+                
+                <div id="q1_incorrect" class="incorrect_message">
+                    <img src="/images/incorrect.png"  class="incorrect_image">
+                    <p class="incorrect_text">Incorrect - the answer is "One hundred-forty-three"</p>
+                </div>
+            </fieldset>
+            
+            <!--Question 2-->
+            <fieldset>
+                <legend>The first day of the week in the American calendar is: </legend>
+                <label>
+                    <input type="radio" name="q2" value="1">
+                    Tuesday
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="2">
+                    Sunday
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="3">
+                    Friday
+                </label>
+                
+                <div id="q1_incorrect" class="incorrect_message">
+                    <img src="/images/incorrect.png"  class="incorrect_image">
+                    <p class="incorrect_text">Incorrect - the answer is "One hundred-forty-three"</p>
+                </div>
+            </fieldset>
+
+            <button onclick="check()">Submit</button>
+            <script src="module1Processor.js"></script>
+
+        </form>
+    </div>
+
+</body>
+</html>

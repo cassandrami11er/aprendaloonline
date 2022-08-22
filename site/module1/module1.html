@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Module 1</title>
+    <link rel="stylesheet" href="module1Style.css">
+</head>
+
+<header>
+    <!--makes the header-->
+    <div id="header">
+        <ul id="headerPages">
+
+            <img src="../images/aprendalo logo.png" id="logo">
+
+            <!--our name: -->
+            <li><h1 id="headerTitle">Aprendalo ESL Online</h1></li>
+
+            <!--guides to the various pages of the website-->
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#beginner">Beginner</a></li>
+            <li><a href="../index.html#intermediate">Intermediate</a></li>
+            <li><a href="../index.html#advanced">Advanced</a></li>
+        </ul>
+    </div>
+</header>
+<body>
+
+    <p class="heading" id="first">Module 1</p>
+
+    <div class="moduleVideos">
+        
+        <p class="video_title" onclick="open_close_vid('0')">
+            Greetings
+            <span class="video_plus">+</span>
+        </p>
+        <div class="video_content">
+            <iframe class="video" src="video_greetings.mp4"></iframe>
+            <div class="video_info">
+                <span class="info_title">Common Greetings (Spanish → English): </span>
+                <br><br>Hola → Hello
+                <br>Adios → Good bye
+                <br>Buenos días → Good morning
+                <br>Buenas tardes → Good evening/night 
+                <br>¿Qué tal? → How is it going?
+                <br>¿Cómo estás? → How are you?
+                <br>Muy bien, ¿y tú? → Very well, and you?
+                <br>¿Cómo te llamas? → What is your name?
+                <br>Me llamo ____ → My name is _____
+                <br>Mucho gusto → Nice to meet you.
+                <br>Igualmente → Same to you.
+            </div>
+        </div>
+
+        <p class="video_title" onclick="open_close_vid('1')">
+            Numbers
+            <span class="video_plus">+</span>
+        </p>
+        <div class="video_content">
+            <iframe class="video" src="video_numbers.mp4"></iframe>
+            <p class="video_info">Covers numbers</p>
+        </div>
+
+        <p class="video_title" onclick="open_close_vid('2')">
+            Days, weeks, seasons
+            <span class="video_plus">+</span>
+        </p>
+        <div class="video_content">
+            <iframe class="video" src="video_days.mp4"></iframe>
+            <p class="video_info">Covers days, weeks, and seasons</p>
+        </div>
+
+        <!--need last video-->
+    </div>
+
+    <hr>
+    <br>
+
+    <div class="moduleReviewTestBox">
+        <p id="review_test_heading">Module 1 Review Test</p>
+        <form id="review_test" name="reviewTest" method="get" onsubmit="return false">
+            <fieldset>
+                <span id="question"></span>
+                <br><br>
+                <label class="multiple_choice">
+                    <input type="radio" name="q" value="0" class="option">
+                    <span id="answer_choice_0"></span>
+                </label>
+                <br class="breaks">
+                <label class="multiple_choice">
+                    <input type="radio" name="q" value="1" class="option">
+                    <span id="answer_choice_1"></span>
+                </label>
+                <br class="breaks">
+                <label class="multiple_choice">
+                    <input type="radio" name="q" value="2" class="option">
+                    <span id="answer_choice_2"></span>
+                </label>
+                <br class="breaks">
+                <label class="multiple_choice">
+                    <input type="radio" name="q" value="3" class="option">
+                    <span id="answer_choice_3"></span>
+                </label>
+
+                <input type="text" name="fill_in" id="fill_in">
+                
+                
+                <div class="message" id="checking_message">
+                    <p id="checking_text"></p>
+                </div>
+                <br>
+                <div class="message" id="completed_message">
+                    <p id="completed_text"></p>
+                    <br>
+                    <span class="completed_text_byq"></span><br>
+                    <span class="completed_text_byq"></span><br>
+                    <span class="completed_text_byq"></span><br>
+                    <span class="completed_text_byq"></span><br>
+                    <span class="completed_text_byq"></span><br>
+                    <span class="completed_text_byq"></span><br>
+                    <br>
+                    <span id="all_correct"></span><br>
+                    <button id="module2_button"><a href="../module2/module2.html">Go to Module 2</a></button>
+                </div>
+                <button id="q_button" onclick="q_button_clicked()">Check</button>
+            </fieldset>
+
+            <script src="module1Processor.js"></script>
+
+        </form>
+    </div>
+
+</body>
+</html>
